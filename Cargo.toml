@@ -1,0 +1,17 @@
+[package]
+name = "sayo"
+version = "0.1.0"
+edition = "2024"
+description = "Linux configurator and soundboard for the SayoDevice K12 keypad"
+license = "CC-BY-NC-SA-4.0"
+repository = "https://github.com/AnnoyedDev/Sayoboard-K12"
+
+[dependencies]
+eframe = "0.29"
+hidapi = "2.6.7"
+rfd = { version = "0.18.0", default-features = false, features = ["xdg-portal"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

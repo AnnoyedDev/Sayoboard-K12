@@ -1,0 +1,12 @@
+[Unit]
+Description=Sayoboard-K12 : sons des touches
+After=pipewire.service pipewire-pulse.service
+Wants=pipewire.service
+
+[Service]
+ExecStart=%h/.local/bin/sayo --fond
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
